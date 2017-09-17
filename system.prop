@@ -1,6 +1,10 @@
 # Xtreme TweakZ
 xtz.break=0
 
+# ART
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.image-dex2oat-filter=speed
+
 # Display
 debug.cpurend.vsync=false
 vendor.display.disable_rotator_downscale=1
