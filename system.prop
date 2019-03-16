@@ -1,1 +1,4 @@
 # Xtreme TweakZ
+
+# Display
+debug.cpurend.vsync=false
