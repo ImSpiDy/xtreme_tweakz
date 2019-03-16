@@ -1,2 +1,5 @@
 # Xtreme TweakZ
 xtz.break=0
+
+# Display
+debug.cpurend.vsync=false
