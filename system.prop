@@ -4,3 +4,6 @@
 debug.cpurend.vsync=false
 vendor.display.disable_rotator_downscale=1
 vendor.display.disable_scaler=0
+
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
