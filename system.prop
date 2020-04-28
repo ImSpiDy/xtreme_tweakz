@@ -53,3 +53,6 @@ ro.config.sdha_apps_bg_min=8
 
 # Zygote preforking
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Perf
+ro.vendor.perf.scroll_opt=true
