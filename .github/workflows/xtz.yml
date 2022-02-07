@@ -1,0 +1,22 @@
+name: XtremeTweak
+
+on:
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: z4nyx/docker:latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Xtreme Tweak
+        run: bash build.sh
+        env:
+           bot_token: ${{ secrets.BOT_TOKEN }}
+           chat_id: ${{ secrets.CHAT_ID }}
+           buildNo: ${{ github.RUN_NUMBER }}
