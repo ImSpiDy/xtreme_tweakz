@@ -23,3 +23,9 @@ xtz /proc/sys/vm/admin_reserve_kbytes 0
 
 # kernel
 xtz /proc/sys/kernel/sched_boost 0
+
+# block
+for queue in /sys/block/*/queue
+do
+xtz "${queue}"/read_ahead_kb 128
+done
