@@ -23,3 +23,7 @@ persist.ims.disableADBLogs=1
 persist.ims.disableDebugLogs=1
 persist.ims.disableIMSLogs=1
 persist.ims.disableQXDMLogs=1
+
+# Ui Smoothness
+persist.service.lgospd.enable=0
+persist.service.pcsync.enable=0
