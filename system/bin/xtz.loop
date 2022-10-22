@@ -1,0 +1,11 @@
+#!/system/bin/sh
+
+while true; do
+
+if [ "$(getprop xtz.break)" == "1" ]; then
+break
+else
+xtz.brain
+fi
+
+done
