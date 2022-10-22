@@ -1,0 +1,19 @@
+#!/system/bin/sh
+
+# Log Dir
+xtz_log=/storage/emulated/0/xtreme_tweakz.log
+
+# Set Profile According to Load
+GL=$(grep % /sys/class/kgsl/kgsl-3d0/gpu_busy_percentage -m 1 | cut -d ' ' -f 1)
+
+if [[ "$GL" -ge "44" ]]; then
+mode=Gaming
+elif [[ "$GL" -ge "24" ]]; then
+mode=Efficient
+else
+mode=Battery
+fi
+
+echo "- $mode Mode Executed on $(date +"%d-%m-%Y %r" )\n" >> $xtz_log
+
+sleep $GL
