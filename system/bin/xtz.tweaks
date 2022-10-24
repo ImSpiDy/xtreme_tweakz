@@ -13,3 +13,6 @@ function xtz () {
 	esac
 	fi
 }
+
+# vm
+xtz /proc/sys/vm/stat_interval 10 1
