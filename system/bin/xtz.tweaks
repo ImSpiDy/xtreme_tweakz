@@ -44,3 +44,6 @@ xtz "${cpu}"/up_rate_limit_us 1000 500
 xtz "${cpu}"/down_rate_limit_us 1000 40000
 xtz "${cpu}"/iowait_boost_enable 0 1
 done
+
+# fs
+xtz /proc/sys/fs/lease-break-time 25 5
