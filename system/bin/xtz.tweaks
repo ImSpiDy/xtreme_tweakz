@@ -1,0 +1,7 @@
+#!/system/bin/sh
+
+if [ "$(getprop xtz.profile)" == "1" ]; then
+# Efficient 
+else
+# Gaming
+fi

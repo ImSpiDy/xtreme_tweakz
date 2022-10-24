@@ -20,8 +20,16 @@ load="$(($a + $b + $c + $d + $e))"
 
 if [[ "$load" -ge "250" ]]; then
 mode=Gaming
+xtz_profile=2
 else
 mode=Efficient
+xtz_profile=1
 fi
 
 echo "- $mode Mode Executed on $(date +"%d-%m-%Y %r" )\n" >> $xtz_log
+
+# set our profile 
+setprop xtz.profile $xtz_profile
+
+# Apply Tweaks
+xtz.tweaks
