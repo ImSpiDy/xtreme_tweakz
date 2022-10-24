@@ -22,6 +22,12 @@ xtz /proc/sys/vm/vfs_cache_pressure 50 20
 # kgsl
 xtz /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0 3
 xtz /sys/class/kgsl/kgsl-3d0/devfreq/polling_interval 10 5
+xtz /sys/class/kgsl/kgsl-3d0/throttling 1 0
+xtz /sys/class/kgsl/kgsl-3d0/force_clk_on 0 1
+xtz /sys/class/kgsl/kgsl-3d0/force_bus_on 0 1
+xtz /sys/class/kgsl/kgsl-3d0/force_rail_on 0 1
+xtz /sys/class/kgsl/kgsl-3d0/force_no_nap 0 1
+xtz /sys/class/kgsl/kgsl-3d0/bus_split 1 0
 
 # stunetune
 xtz /dev/stune/top-app/schedtune.boost 1 50
