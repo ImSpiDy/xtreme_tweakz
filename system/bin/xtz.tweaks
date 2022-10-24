@@ -50,3 +50,6 @@ xtz /proc/sys/fs/lease-break-time 25 5
 
 # kernel
 xtz /proc/sys/kernel/perf_cpu_time_max_percent 45 15
+
+# LMK
+xtz /sys/module/lowmemorykiller/parameters/lmk_fast_run 0 1
