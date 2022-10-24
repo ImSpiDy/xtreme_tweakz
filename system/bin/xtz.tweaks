@@ -2,6 +2,7 @@
 
 # 1 = Efficient | 2 = Gaming
 function xtz () {
+	if [ -e $1 -a -w $1 ]; then
 	case $(getprop xtz.profile) in
 	1)
 	echo $2 > $1
@@ -10,4 +11,5 @@ function xtz () {
 	echo $3 > $1
 	;;
 	esac
+	fi
 }
