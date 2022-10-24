@@ -16,3 +16,4 @@ function xtz () {
 
 # vm
 xtz /proc/sys/vm/stat_interval 10 1
+xtz /proc/sys/vm/swappiness 50 100
