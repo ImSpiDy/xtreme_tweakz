@@ -22,3 +22,8 @@ xtz /proc/sys/vm/vfs_cache_pressure 50 20
 # kgsl
 xtz /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0 3
 xtz /sys/class/kgsl/kgsl-3d0/devfreq/polling_interval 10 5
+
+# stunetune
+xtz /dev/stune/top-app/schedtune.boost 1 50
+xtz /dev/stune/top-app/schedtune.prefer_idle 0 1
+xtz /dev/stune/foreground/schedtune.boost 0 45
