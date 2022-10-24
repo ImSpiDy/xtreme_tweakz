@@ -21,3 +21,4 @@ xtz /proc/sys/vm/vfs_cache_pressure 50 20
 
 # kgsl
 xtz /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0 3
+xtz /sys/class/kgsl/kgsl-3d0/devfreq/polling_interval 10 5
