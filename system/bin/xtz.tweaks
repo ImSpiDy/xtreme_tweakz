@@ -30,3 +30,11 @@ xtz /dev/stune/foreground/schedtune.boost 0 45
 
 # module
 xtz /sys/module/mmc_core/parameters/use_spi_crc 1 0
+
+# Schedutil
+for cpu in /sys/devices/system/cpu/*/cpufreq/schedutil
+do
+xtz "${cpu}"/up_rate_limit_us 1000 500
+xtz "${cpu}"/down_rate_limit_us 1000 40000
+xtz "${cpu}"/iowait_boost_enable 0 1
+done
