@@ -5,3 +5,10 @@ function xtz () {
 	echo $2 > $1
 	fi
 }
+
+# cpuset
+xtz /dev/cpuset/audio-app/cpus "0-3"
+xtz /dev/cpuset/foreground/cpus "0-3,6-7"
+xtz /dev/cpuset/background/cpus "0-1"
+xtz /dev/cpuset/restricted/cpus "0-3"
+xtz /dev/cpuset/system-background/cpus "0-3"
