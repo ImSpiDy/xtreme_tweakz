@@ -18,6 +18,7 @@ function xtz () {
 xtz /proc/sys/vm/stat_interval 10 1
 xtz /proc/sys/vm/swappiness 50 100
 xtz /proc/sys/vm/vfs_cache_pressure 50 20
+xtz /proc/sys/vm/dirty_background_ratio 10 5
 
 # kgsl
 xtz /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0 3
