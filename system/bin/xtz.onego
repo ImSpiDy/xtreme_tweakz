@@ -28,4 +28,5 @@ xtz /proc/sys/kernel/sched_boost 0
 for queue in /sys/block/*/queue
 do
 xtz "${queue}"/read_ahead_kb 128
+xtz "${queue}"/iostats 0
 done
