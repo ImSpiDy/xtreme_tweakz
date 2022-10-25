@@ -18,6 +18,7 @@ xtz /proc/sys/vm/overcommit_memory 1
 xtz /proc/sys/vm/page-cluster 0
 xtz /proc/sys/vm/compact_unevictable_allowed 0
 xtz /proc/sys/vm/extfrag_threshold 750
+xtz /proc/sys/vm/oom_dump_tasks 0
 
 # kernel
 xtz /proc/sys/kernel/sched_boost 0
