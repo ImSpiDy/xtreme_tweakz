@@ -16,3 +16,6 @@ xtz /dev/cpuset/system-background/cpus "0-3"
 # vm
 xtz /proc/sys/vm/overcommit_memory 1
 xtz /proc/sys/vm/page-cluster 0
+
+# kernel
+xtz /proc/sys/kernel/sched_boost 0
