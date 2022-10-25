@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-ZIPNAME=Xtreme-TweakZ-x0.${buildNo}.zip
+. module.prop
+
+ZIPNAME=Xtreme-TweakZ-${version}.${buildNo}.zip
 
 function push() {
 curl -F document=@$1 "https://api.telegram.org/bot${bot_token}/sendDocument" \
