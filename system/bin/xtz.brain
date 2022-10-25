@@ -26,7 +26,7 @@ mode=Efficient
 xtz_profile=1
 fi
 
-echo "- $mode Mode Executed on $(date +"%d-%m-%Y %r" )\n" >> $xtz_log
+echo "- GPU Load : $(($load / 5))% | $mode Mode Executed on $(date +"%d-%m-%Y %r" )\n" >> $xtz_log
 
 # set our profile 
 setprop xtz.profile $xtz_profile
