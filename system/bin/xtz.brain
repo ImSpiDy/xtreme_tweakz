@@ -4,11 +4,21 @@
 xtz_log=/storage/emulated/0/xtreme_tweakz.log
 
 # Set Profile According to Load
-GL=$(grep % /sys/class/kgsl/kgsl-3d0/gpu_busy_percentage -m 1 | cut -d ' ' -f 1)
+function gpu_load ()
+{
+        GL=$(grep % /sys/class/kgsl/kgsl-3d0/gpu_busy_percentage -m 1 | cut -d ' ' -f 1)
+        sleep 1
+}
 
-if [[ "$GL" -ge "44" ]]; then
+gpu_load && a=$GL
+gpu_load && b=$GL
+gpu_load && c=$GL
+
+load="$(($a + $b + $c))"
+
+if [[ "$load" -ge "132" ]]; then
 mode=Gaming
-elif [[ "$GL" -ge "24" ]]; then
+elif [[ "$load" -ge "72" ]]; then
 mode=Efficient
 else
 mode=Battery
