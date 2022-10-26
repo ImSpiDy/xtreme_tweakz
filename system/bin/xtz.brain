@@ -18,7 +18,7 @@ gpu_load && e=$GL
 
 load="$(($a + $b + $c + $d + $e))"
 
-if [[ "$load" -ge "250" ]]; then
+if [[ "$load" -ge "220" ]]; then
 mode=Gaming
 xtz_profile=2
 else
