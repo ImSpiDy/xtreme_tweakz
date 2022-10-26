@@ -60,4 +60,5 @@ xtz /sys/module/lowmemorykiller/parameters/lmk_fast_run 0 1
 for queue in /sys/block/*/queue
 do
 xtz "${queue}"/nr_requests 64 128
+xtz "${queue}"/rq_affinity 1 2
 done
