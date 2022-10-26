@@ -53,6 +53,7 @@ xtz /proc/sys/fs/lease-break-time 25 5
 xtz /proc/sys/kernel/perf_cpu_time_max_percent 45 15
 xtz /proc/sys/kernel/sched_child_runs_first 1 0
 xtz /proc/sys/kernel/sched_migration_cost_ns 1000000 2000000
+xtz /proc/sys/kernel/sched_min_granularity_ns 1250000 2000000
 
 # LMK
 xtz /sys/module/lowmemorykiller/parameters/lmk_fast_run 0 1
