@@ -29,5 +29,6 @@ xtz /proc/sys/kernel/timer_migration 0
 for queue in /sys/block/*/queue
 do
 xtz "${queue}"/read_ahead_kb 128
+xtz "${queue}"/rotational 0
 xtz "${queue}"/iostats 0
 done
