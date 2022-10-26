@@ -55,3 +55,9 @@ xtz /proc/sys/kernel/sched_child_runs_first 1 0
 
 # LMK
 xtz /sys/module/lowmemorykiller/parameters/lmk_fast_run 0 1
+
+# Block
+for queue in /sys/block/*/queue
+do
+xtz "${queue}"/nr_requests 64 128
+done
