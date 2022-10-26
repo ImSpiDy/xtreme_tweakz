@@ -30,6 +30,7 @@ xtz /proc/sys/kernel/sched_autogroup_enabled 0
 for queue in /sys/block/*/queue
 do
 xtz "${queue}"/read_ahead_kb 128
+xtz "${queue}"/add_random 0
 xtz "${queue}"/rotational 0
 xtz "${queue}"/iostats 0
 done
