@@ -61,4 +61,5 @@ for queue in /sys/block/*/queue
 do
 xtz "${queue}"/nr_requests 64 128
 xtz "${queue}"/rq_affinity 1 2
+xtz "${queue}"/nomerges 0 2
 done
