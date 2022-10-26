@@ -24,6 +24,7 @@ xtz /proc/sys/vm/admin_reserve_kbytes 0
 # kernel
 xtz /proc/sys/kernel/sched_boost 0
 xtz /proc/sys/kernel/timer_migration 0
+xtz /proc/sys/kernel/sched_autogroup_enabled 0
 
 # block
 for queue in /sys/block/*/queue
