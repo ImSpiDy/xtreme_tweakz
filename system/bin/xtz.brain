@@ -27,14 +27,16 @@ xtz_profile=1
 fi
 
 if [ "$(getprop xtz.profile)" != "$xtz_profile" ]; then
+
 echo "- GPU Load : $(($load / 5))% | $mode Mode Executed on $(date +"%d-%m-%Y %r" )\n" >> $xtz_log
-fi
 
 # set our profile 
 setprop xtz.profile $xtz_profile
 
 # Apply Tweaks
 xtz.tweaks
+
+fi
 
 # relax our loop
 sleep 64
