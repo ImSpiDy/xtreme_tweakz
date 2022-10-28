@@ -36,7 +36,7 @@ setprop xtz.profile $xtz_profile
 # Apply Tweaks
 xtz.tweaks
 
+sleep 55
+else
+sleep 85
 fi
-
-# relax our loop
-sleep 64
