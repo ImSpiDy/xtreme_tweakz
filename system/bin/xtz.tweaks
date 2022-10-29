@@ -6,9 +6,11 @@ function xtz () {
 	case $(getprop xtz.profile) in
 	1)
 	echo $2 > $1
+	mode=Efficient
 	;;
 	2)
 	echo $3 > $1
+	mode=Gaming
 	;;
 	esac
 	fi
@@ -71,3 +73,7 @@ xtz "${queue}"/nr_requests 64 128
 xtz "${queue}"/rq_affinity 1 2
 xtz "${queue}"/nomerges 0 2
 done
+
+# log
+xtz_log=/storage/emulated/0/Xtreme_TweakZ.log
+echo "- $mode Mode Executed on $(date +"%d-%m-%Y %r" )\n" >> $xtz_log
