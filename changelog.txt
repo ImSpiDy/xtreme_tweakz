@@ -1,1 +1,5 @@
 Xtreme TweakZ
+
+su -c xtz -G ( Gaming )
+su -c xtz -E ( Efficient )
+su -c xtz -A ( Automatic )
