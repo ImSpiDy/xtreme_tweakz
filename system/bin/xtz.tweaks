@@ -43,6 +43,7 @@ xtz /sys/module/mmc_core/parameters/use_spi_crc 1 0
 xtz /sys/module/msm_thermal/core_control/enabled 1 0
 xtz /sys/module/workqueue/parameters/power_efficient Y N
 xtz /sys/module/cpu_input_boost/parameters/input_boost_duration 0 128
+xtz /sys/module/adreno_idler/parameters/adreno_idler_active 1 0
 
 # Schedutil
 for cpu in /sys/devices/system/cpu/*/cpufreq/schedutil
