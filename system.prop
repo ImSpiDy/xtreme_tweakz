@@ -1,5 +1,6 @@
 # Xtreme TweakZ
 xtz.break=0
+xtz.profile=0
 
 # ART
 dalvik.vm.dex2oat-filter=quicken
