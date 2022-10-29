@@ -1,2 +1,2 @@
 # Xtreme TweakZ
-A Module Which Aims To Improve User Experience By Switching Between Gaming and Efficient Mode Based On GPU Load
+A Kernel Tweak which Aims to Improve User Experience by Switching between Gaming and Efficient mode Based on Gpu Load
