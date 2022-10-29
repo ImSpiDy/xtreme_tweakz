@@ -35,3 +35,6 @@ xtz "${queue}"/add_random 0
 xtz "${queue}"/rotational 0
 xtz "${queue}"/iostats 0
 done
+
+# module
+xtz /sys/module/cpu_boost/parameters/input_boost_ms 0
