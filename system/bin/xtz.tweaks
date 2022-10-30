@@ -60,7 +60,7 @@ xtz "${cpu}"/iowait_boost_enable 0 1
 done
 
 # fs
-xtz /proc/sys/fs/lease-break-time 25 5
+xtz /proc/sys/fs/lease-break-time 35 15
 
 # kernel
 xtz /proc/sys/kernel/perf_cpu_time_max_percent 25 0
