@@ -1,5 +1,9 @@
 #!/system/bin/sh
 
+xtz_tweak=/storage/emulated/0/NubXD/xtz_tweak.log
+xtz_log=/storage/emulated/0/NubXD/xtz_main.log
+echo " Node : Value " > $xtz_tweak
+
 # 1 = Efficient | 2 = Gaming
 function xtz () {
 	if [ -e $1 -a -w $1 ]; then
@@ -13,6 +17,7 @@ function xtz () {
 	mode=Gaming
 	;;
 	esac
+	echo " $1 : $(cat $1) " >> $xtz_tweak
 	fi
 }
 
@@ -78,5 +83,4 @@ xtz "${queue}"/nomerges 0 2
 done
 
 # log
-xtz_log=/storage/emulated/0/Xtreme_TweakZ.log
 echo "- $mode Mode Executed on $(date +"%d-%m-%Y %r" )\n" >> $xtz_log

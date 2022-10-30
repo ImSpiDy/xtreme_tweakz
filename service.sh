@@ -5,7 +5,9 @@ MODDIR=${0%/*}
 # Late Start To Prevent Conflicts
 sleep 69
 
-xtz_log=/storage/emulated/0/Xtreme_TweakZ.log
+mkdir -p /storage/emulated/0/NubXD
+
+xtz_log=/storage/emulated/0/NubXD/xtz_main.log
 echo "- Xtreme TweakZ Executed Successfully" > $xtz_log
 echo "
 [*] Device : $(getprop ro.product.model) 

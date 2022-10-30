@@ -1,8 +1,12 @@
 #!/system/bin/sh
 
+xtz_onego=/storage/emulated/0/NubXD/xtz_onego.log
+echo " Node : Value " > $xtz_onego
+
 function xtz () {
 	if [ -e $1 -a -w $1 ]; then
 	echo $2 > $1
+	echo " $1 : $(cat $1) " >> $xtz_onego
 	fi
 }
 
