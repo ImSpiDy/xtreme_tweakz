@@ -71,9 +71,6 @@ xtz /proc/sys/kernel/sched_wakeup_granularity_ns 1000000 5000000
 xtz /proc/sys/kernel/random/read_wakeup_threshold 64 512
 xtz /proc/sys/kernel/random/write_wakeup_threshold 896 1024
 
-# LMK
-xtz /sys/module/lowmemorykiller/parameters/lmk_fast_run 0 1
-
 # Block
 for queue in /sys/block/*/queue
 do
