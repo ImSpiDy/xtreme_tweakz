@@ -2,10 +2,16 @@
 
 MODDIR=${0%/*}
 
-su -lp 2000 -c "cmd notification post -S bigtext -t 'Xtreme TweakZ' tag 'Starting Tweak within a min.. Please wait..'"
+# Detect whether Unlocked into System
+while $(dumpsys window policy | grep mIsShowing | awk -F= '{print $2}')
+do
+sleep 1
+done
 
 # Late Start To Prevent Conflicts
-sleep 69
+sleep 10
+
+su -lp 2000 -c "cmd notification post -S bigtext -t 'Xtreme TweakZ' tag 'has Started Successfully on $(date +"%d-%m-%Y %r" )'"
 
 mkdir -p /storage/emulated/0/NubXD
 
