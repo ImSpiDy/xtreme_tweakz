@@ -2,8 +2,8 @@
 
 while true; do
 
-if [ "$(getprop xtz.break)" == "1" ]; then
-break
+if [ "$(getprop xtz.sleep)" == "1" ]; then
+sleep 3m
 else
 xtz.brain
 fi

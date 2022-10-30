@@ -5,16 +5,15 @@ sprop=/data/adb/modules/XtremeTweakZ/system.prop
 
 case "$1" in
 	 -A)
-	 setprop xtz.break 0
-	 sed -i '/xtz.break=/s/.*/xtz.break=0/' $sprop
+	 setprop xtz.sleep 0
+	 sed -i '/xtz.sleep=/s/.*/xtz.sleep=0/' $sprop
 	 echo "- Enabled Auto Mode by User on $(date +"%d-%m-%Y %r" )\n" >> $logs
 	 echo "- Enabled Auto Mode 
-- Please Restart the App "
-	 xtz.loop
+- AutoMode will Start within 3 mins"
 	 ;;
 	 -E)
-	 setprop xtz.break 1
-	 sed -i '/xtz.break=/s/.*/xtz.break=1/' $sprop
+	 setprop xtz.sleep 1
+	 sed -i '/xtz.sleep=/s/.*/xtz.sleep=1/' $sprop
 	 setprop xtz.profile 1
 	 sed -i '/xtz.profile=/s/.*/xtz.profile=1/' $sprop
 	 xtz.tweaks
@@ -22,8 +21,8 @@ case "$1" in
 	 echo "- Enabled Efficient Mode by User on $(date +"%d-%m-%Y %r" )\n" >> $logs
 	 ;;
 	 -G)
-	 setprop xtz.break 1
-	 sed -i '/xtz.break=/s/.*/xtz.break=1/' $sprop
+	 setprop xtz.sleep 1
+	 sed -i '/xtz.sleep=/s/.*/xtz.sleep=1/' $sprop
 	 setprop xtz.profile 2
 	 sed -i '/xtz.profile=/s/.*/xtz.profile=2/' $sprop
 	 xtz.tweaks
