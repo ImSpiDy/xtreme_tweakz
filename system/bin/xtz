@@ -36,6 +36,19 @@ case "$1" in
 	 DIFF=$(($E - $S))
 	 echo "- time took: $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) second(s)."
 	 ;;
+	 -L|-l)
+	 if [ "$(getprop xtz.logs)" == "0" ]; then
+	 setprop xtz.logs 1
+	 sed -i '/xtz.logs=/s/.*/xtz.logs=1/' $sprop
+	 echo "Enabled Xtz Logs"
+	 else
+	 setprop xtz.logs 0
+	 sed -i '/xtz.logs=/s/.*/xtz.logs=0/' $sprop
+	 echo "Disabled Xtz Logs"
+	 fi
+	 xtz.onego
+	 xtz.tweaks
+	 ;;
 	 -help|-h|-H|-Help|-HELP)
 	 clear
 	 echo "  
@@ -52,6 +65,8 @@ case "$1" in
            Auto Mode
   -D, -d :         -         : Optimises ART runtime to fix UI Lags or Idle Drain
            Art Optimizer
+  -L, -l :         -         : Provides Log of node and its value applied by Tweak
+           Tweaks Logs
 "
 	 ;; 
 esac

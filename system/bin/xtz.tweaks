@@ -2,7 +2,11 @@
 
 xtz_tweak=/storage/emulated/0/NubXD/xtz_tweak.log
 xtz_log=/storage/emulated/0/NubXD/xtz_main.log
+if [ "$(getprop xtz.logs)" == "1" ]; then
 echo " Node : Value " > $xtz_tweak
+else
+rm -rf $xtz_tweak
+fi
 
 # 1 = Efficient | 2 = Gaming
 function xtz () {

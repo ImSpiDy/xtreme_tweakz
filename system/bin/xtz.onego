@@ -1,7 +1,11 @@
 #!/system/bin/sh
 
 xtz_onego=/storage/emulated/0/NubXD/xtz_onego.log
+if [ "$(getprop xtz.logs)" == "1" ]; then
 echo " Node : Value " > $xtz_onego
+else
+rm -rf $xtz_onego
+fi
 
 function xtz () {
 	if [ -e $1 -a -w $1 ]; then
