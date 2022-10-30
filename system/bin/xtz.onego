@@ -45,3 +45,4 @@ xtz /sys/module/cpu_boost/parameters/input_boost_ms 0
 
 # LMK
 xtz /sys/module/lowmemorykiller/parameters/lmk_fast_run 0
+xtz /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 0
