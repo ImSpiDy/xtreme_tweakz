@@ -12,8 +12,6 @@ curl -F document=@$1 "https://api.telegram.org/bot${bot_token}/sendDocument" \
      -F caption="`cat changelog.txt`"
 }
 
-rm -rf banner
-
 zip -r9 "${ZIPNAME}" * -x build.sh -x *.github*
 
 push "${ZIPNAME}"
