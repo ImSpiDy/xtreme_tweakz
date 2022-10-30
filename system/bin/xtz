@@ -4,14 +4,14 @@ logs=/storage/emulated/0/Xtreme_TweakZ.log
 sprop=/data/adb/modules/XtremeTweakZ/system.prop
 
 case "$1" in
-	 -A)
+	 -A|-a)
 	 setprop xtz.sleep 0
 	 sed -i '/xtz.sleep=/s/.*/xtz.sleep=0/' $sprop
 	 echo "- Enabled Auto Mode by User on $(date +"%d-%m-%Y %r" )\n" >> $logs
 	 echo "- Enabled Auto Mode 
 - AutoMode will Start within 3 mins"
 	 ;;
-	 -E)
+	 -E|-e)
 	 setprop xtz.sleep 1
 	 sed -i '/xtz.sleep=/s/.*/xtz.sleep=1/' $sprop
 	 setprop xtz.profile 1
@@ -20,7 +20,7 @@ case "$1" in
 	 echo "- Enabled Efficient Mode"
 	 echo "- Enabled Efficient Mode by User on $(date +"%d-%m-%Y %r" )\n" >> $logs
 	 ;;
-	 -G)
+	 -G|-g)
 	 setprop xtz.sleep 1
 	 sed -i '/xtz.sleep=/s/.*/xtz.sleep=1/' $sprop
 	 setprop xtz.profile 2
@@ -29,4 +29,20 @@ case "$1" in
 	 echo "- Enabled Gaming Mode"
 	 echo "- Enabled Gaming Mode by User on $(date +"%d-%m-%Y %r" )\n" >> $logs
 	 ;;
+	 -help|-h|-H|-Help|-HELP)
+	 clear
+	 echo "  
+   Xtreme TweakZ Menu
+	 
+ use/run : su -c xtz [commands give below]
+ example : su -c xtz -G
+	 
+  -G, -g :         -         : Increase device Performance To Provide Best FPS
+           Gaming Mode
+  -E, -e :         -         : Provides Balance Between Performance and Battery 
+           Efficient Mode
+  -A, -a :         -         : Changes Efficient to Gaming Based on GPU Load
+           Auto Mode
+"
+	 ;; 
 esac
