@@ -54,8 +54,8 @@ xtz /sys/module/kprofiles/parameters/kp_mode 1 3
 # Schedutil
 for cpu in /sys/devices/system/cpu/*/cpufreq/schedutil
 do
-xtz "${cpu}"/up_rate_limit_us 5000 500
-xtz "${cpu}"/down_rate_limit_us 10000 40000
+xtz "${cpu}"/up_rate_limit_us 2000 400
+xtz "${cpu}"/down_rate_limit_us 20000 40000
 xtz "${cpu}"/iowait_boost_enable 0 1
 done
 
