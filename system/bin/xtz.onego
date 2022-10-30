@@ -34,7 +34,6 @@ xtz /proc/sys/kernel/sched_latency_ns 10000000
 # block
 for queue in /sys/block/*/queue
 do
-xtz "${queue}"/read_ahead_kb 128
 xtz "${queue}"/add_random 0
 xtz "${queue}"/rotational 0
 xtz "${queue}"/iostats 0

@@ -74,6 +74,7 @@ xtz /proc/sys/kernel/random/write_wakeup_threshold 896 1024
 # Block
 for queue in /sys/block/*/queue
 do
+xtz "${queue}"/read_ahead_kb 128 256
 xtz "${queue}"/nr_requests 64 128
 xtz "${queue}"/rq_affinity 1 2
 xtz "${queue}"/nomerges 0 2
