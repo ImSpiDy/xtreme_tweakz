@@ -2,6 +2,8 @@
 
 MODDIR=${0%/*}
 
+su -lp 2000 -c "cmd notification post -S bigtext -t 'Xtreme TweakZ' tag 'Starting Tweak within a min.. Please wait..'"
+
 # Late Start To Prevent Conflicts
 sleep 69
 
