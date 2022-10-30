@@ -29,6 +29,13 @@ case "$1" in
 	 echo "- Enabled Gaming Mode"
 	 echo "- Enabled Gaming Mode by User on $(date +"%d-%m-%Y %r" )\n" >> $logs
 	 ;;
+	 -D|-d)
+	 S=$(date +"%s")
+	 su -c cmd package bg-dexopt-job
+	 E=$(date +"%s")
+	 DIFF=$(($E - $S))
+	 echo "- time took: $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) second(s)."
+	 ;;
 	 -help|-h|-H|-Help|-HELP)
 	 clear
 	 echo "  
@@ -43,6 +50,8 @@ case "$1" in
            Efficient Mode
   -A, -a :         -         : Changes Efficient to Gaming Based on GPU Load
            Auto Mode
+  -D, -d :         -         : Optimises ART runtime to fix UI Lags or Idle Drain
+           Art Optimizer
 "
 	 ;; 
 esac
