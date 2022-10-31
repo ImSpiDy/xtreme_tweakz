@@ -31,10 +31,11 @@ case "$1" in
 	 ;;
 	 -D|-d)
 	 S=$(date +"%s")
-	 su -c cmd package bg-dexopt-job
+	 echo "Started ART optimization"
+	 su -c "cmd package bg-dexopt-job"
 	 E=$(date +"%s")
 	 DIFF=$(($E - $S))
-	 echo "- time took: $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) second(s)."
+	 echo "- time took: $(($DIFF / 60)) min(s) and $(($DIFF % 60)) sec(s)."
 	 ;;
 	 -L|-l)
 	 if [ "$(getprop xtz.logs)" == "0" ]; then
@@ -57,16 +58,20 @@ case "$1" in
  use/run : su -c xtz [commands give below]
  example : su -c xtz -G
 	 
-  -G, -g :         -         : Increase device Performance To Provide Best FPS
-           Gaming Mode
-  -E, -e :         -         : Provides Balance Between Performance and Battery 
-           Efficient Mode
-  -A, -a :         -         : Changes Efficient to Gaming Based on GPU Load
-           Auto Mode
-  -D, -d :         -         : Optimises ART runtime to fix UI Lags or Idle Drain
-           Art Optimizer
-  -L, -l :         -         : Provides Log of node and its value applied by Tweak
-           Tweaks Logs
+  -G, -g : Gaming Mode
+         : Increases device Performance To Provide Best FPS
+           
+  -E, -e : Efficient Mode  
+         : Provide a Balance Between Performance and Battery 
+           
+  -A, -a : Auto Mode     
+         : Changes Mode Based on GPU Load (above 44% = Gaming)
+           
+  -D, -d : Art Optimizer
+         : Optimises ART runtime to fix UI Lags or Idle Drain
+         
+  -L, -l : Tweaks Logs
+         : Provides Log of node and its value applied by Tweak
 "
 	 ;; 
 esac
